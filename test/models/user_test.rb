@@ -1,5 +1,7 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  devise :database_authenticatable, :validatable
+  test "name" do
+    assert_equal "Accountant", users(:accountant).name
+  end
 end
